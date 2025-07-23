@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'mona_lisa_approach = basics_sensor_data.mona_lisa_approach:main',
             'color_detector = basics_sensor_data.color_detector:main',
+            'point_cloud_marker = basics_sensor_data.point_cloud_marker:main',
         ],
     },
 )
