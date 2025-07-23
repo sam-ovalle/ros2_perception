@@ -10,3 +10,20 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 cd ~/ros2_ws/
 colcon build;source install/setup.bash
 ros2 run basics_sensor_data mona_lisa_approach
+
+----------------------
+commands (example 2.2)
+----------------------
+ros2 topic echo /deepmind_robot1/deepmind_robot1_camera/image_raw
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+rviz2 -d ~/ros2_ws/src/basics_sensor_data/rviz/basics_sensor_data.rviz
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run basics_sensor_data color_detector
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.7 1
