@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'mona_lisa_approach = basics_sensor_data.mona_lisa_approach:main',
         ],
     },
 )
