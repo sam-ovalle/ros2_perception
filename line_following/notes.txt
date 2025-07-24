@@ -1,23 +1,17 @@
 ----------------------
-commands (example 3.1)
+commands (example 3.2)
 ----------------------
-
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 source /home/simulations/ros2_sims_ws/install/setup.bash
 ros2 run perception_ros2 range_detector --ros-args -p filter:=HSV -p preview:=True
 
-Values for solution 3.1 found:
+Values for solution 3.2 found:
 H_MIN = 0
-S_MIN = 0
-V_MIN = 204
-H_MAX = 12
+S_MIN = 180
+V_MIN = 0
+H_MAX = 50
 S_MAX = 255
 V_MAX = 255
-
-----------------------
-commands (example 3.1.2)
-----------------------
 
 source /home/simulations/ros2_sims_ws/install/setup.bash
 rviz2 -d ~/ros2_ws/src/basics_sensor_data/rviz/basics_sensor_data.rviz
@@ -29,9 +23,18 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 cd ~/ros2_ws/
 colcon build;source install/setup.bash
-ros2 run blob_tracking blob_point_pub
+ros2 run line_following follow_yellow_line
 
 cd ~/ros2_ws/
 colcon build;source install/setup.bash
-ros2 run blob_tracking blob_tracker
+ros2 run line_following follow_yellow_line_optimized
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.9 1
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run line_following follow_door
+
+ros2 topic pub /door_choice std_msgs/String "data: 'orange'"
 
