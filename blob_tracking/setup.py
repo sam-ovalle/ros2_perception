@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'blob_point_pub = blob_tracking.blob_point_pub:main',
+            'blob_tracker = blob_tracking.blob_tracker:main',
         ],
     },
 )
