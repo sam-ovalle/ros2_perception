@@ -1,0 +1,16 @@
+----------------------
+commands (example 3.1)
+----------------------
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run perception_ros2 range_detector --ros-args -p filter:=HSV -p preview:=True
+
+Values for solution 3.1 found:
+H_MIN = 0
+S_MIN = 0
+V_MIN = 204
+H_MAX = 12
+S_MAX = 255
+V_MAX = 255
