@@ -18,7 +18,7 @@ colcon build;source install/setup.bash
 ros2 run advanced_perception yolo_object_detection
 
 ----------------------
-commands (example 6.1)
+commands (example 6.2)
 ----------------------
 
 source /home/simulations/ros2_sims_ws/install/setup.bash
@@ -37,3 +37,15 @@ cd ~/ros2_ws/
 colcon build;source install/setup.bash
 ros2 run advanced_perception yolo_person_follower
 
+----------------------
+commands (example 6.3)
+----------------------
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+rviz2 -d /home/simulations/ros2_sims_ws/src/course_perception_ros2_files/perception_ros2/rviz/yolo_pose_estimation.rviz
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run advanced_perception yolo_pose_estimation
+
+ros2 topic echo /yolov8_pose_results
