@@ -40,3 +40,16 @@ cd ~/ros2_ws/
 colcon build;source install/setup.bash
 ros2 run hri face_recognition
 
+----------------------
+commands (example 5.3)
+----------------------
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+rviz2 -d /home/simulations/ros2_sims_ws/src/course_perception_ros2_files/perception_ros2/rviz/human_tracking.rviz
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run hri human_tracking
+
