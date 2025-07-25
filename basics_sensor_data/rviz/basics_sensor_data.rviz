@@ -12,9 +12,9 @@ Panels:
         - /Image1
         - /Image1/Topic1
         - /PointCloud21
-        - /PointCloud21/Status1
         - /PointCloud21/Topic1
         - /MarkerArray1
+        - /MarkerArray2
       Splitter Ratio: 0.3492063581943512
     Tree Height: 354
   - Class: rviz_common/Selection
@@ -338,13 +338,25 @@ Visualization Manager:
       Enabled: true
       Name: MarkerArray
       Namespaces:
-        "": true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /visualization_marker_array
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        "": true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /bench_markers
       Value: true
   Enabled: true
   Global Options:
