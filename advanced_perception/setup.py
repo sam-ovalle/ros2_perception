@@ -24,6 +24,7 @@ setup(
             'yolo_person_follower = advanced_perception.yolo_person_follower:main',
             'yolo_pose_estimation = advanced_perception.yolo_pose_estimation:main',
             'yolo_segmentation = advanced_perception.yolo_segmentation:main',
+            'fruit_mask_saver = advanced_perception.fruit_mask_saver:main',
         ],
     },
 )
