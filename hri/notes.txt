@@ -29,3 +29,14 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 For the eye detection, this time you should choose /detected_faces/eyes for the Image Display
 
+----------------------
+commands (example 5.2)
+----------------------
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+rviz2 -d /home/simulations/ros2_sims_ws/src/course_perception_ros2_files/perception_ros2/rviz/face_recognition.rviz
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run hri face_recognition
+
