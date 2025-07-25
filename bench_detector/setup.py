@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'surface_detection = bench_detector.surface_detection:main',
             'static_transform_publisher = bench_detector.static_transform_publisher:main',
+            'object_detection = bench_detector.object_detection:main',
         ],
     },
 )

@@ -29,3 +29,33 @@ cd ~/ros2_ws/
 colcon build;source install/setup.bash
 ros2 topic echo /surface_detected
 
+----------------------
+commands (example 4.2)
+----------------------
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 launch perception_ros2 spawn_cube.launch.py
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+rviz2 -d ~/ros2_ws/src/basics_sensor_data/rviz/basics_sensor_data.rviz
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.3 1
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run bench_detector static_transform_publisher
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run bench_detector object_detection
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 topic echo /surface_detected
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 topic echo /object_detected
