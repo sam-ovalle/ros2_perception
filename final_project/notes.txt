@@ -1,0 +1,45 @@
+----------------------
+commands (example 7.1)
+----------------------
+
+cd ~/ros2_ws/
+colcon build;source install/setup.bash
+ros2 run final_project range_detector --ros-args -p filter:=HSV -p preview:=True
+
+----------------------
+commands (example 7.2)
+----------------------
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.9 1
+
+ros2 topic pub /aoi_choice std_msgs/msg/String "data: 'yellow'"
+
+cd ros2_ws
+colcon build
+source install/setup.bash
+ros2 run final_project line_follower
+
+ros2 run final_project go_to_aoi
+
+----------------------
+commands (example 7.3)
+----------------------
+
+cd ros2_ws
+colcon build
+source install/setup.bash
+
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.0 1
+
+ros2 topic pub /aoi_choice std_msgs/msg/String "data: 'yellow'"
+
+source /home/simulations/ros2_sims_ws/install/setup.bash
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.9 1
+
+ros2 run final_project go_to_aoi
+
+ros2 run deepmind_bot_trajectory_sender move_head.py 0.0 0.0 1
+ros2 run final_project object_detection
+
+ros2 run final_project inventory_checking
