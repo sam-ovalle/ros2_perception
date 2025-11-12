@@ -2,7 +2,11 @@
 
 ## Tooling: OpenCV, PCL, YOLO
 
-## Unit 3: Visualization
+Throughout this course, the Google DeepMind robot is used in a provided museum simulation environment
+
+![Alt text](readme/unit1-deepmind.png "Image of DeepMind robot in Museum Sim")
+
+## Unit 2: Visualization
 Exploring RViz2 for visualization of sensor message types
 
 In the first exercise, we visualize the 2D Lidar data as laser scan msgs
@@ -16,7 +20,7 @@ In the second exercise, we visualize the camera data as Image msgs
 
 In the final exercise, we append markers to visualize 3D lidar data in RViz2
 
-![Alt text](readme/unit2-3d-markers.png "Gif of markers in RViz2")
+![Alt text](readme/unit2-3d-markers.gif "Gif of markers in RViz2")
 
 ## Unit 3: Image Processing
 Exploring the use of open-Computer-Vision (openCV) for robotics use cases
