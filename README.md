@@ -2,6 +2,17 @@
 
 ## Tooling: OpenCV, PCL, YOLO
 
+## Unit 4: Point Cloud Processing
+Exploring the use of point cloud library (PCL) for robotics use cases
+
+In the first exercise, a ROS node using PCL detects the surface of the bench and isolates the point cloud detections defining the surface
+
+![Alt text](readme/unit4-surface-detection.gif "Gif of detection and isolation of bench surface in point cloud")
+
+In the second exercise, a ROS node using PCL detects the bench and a cube over it, and isolates the point cloud detections for each as indexed objects with poses 
+
+![Alt text](readme/unit4-object-detection.gif "Gif of isolating point cloud of objects detected (surface and box)")
+
 ## Unit 5: Human Robot Interaction
 Exploring the use of perception to interface a robot with humans in its environment
 
