@@ -2,6 +2,33 @@
 
 ## Tooling: OpenCV, PCL, YOLO
 
+## Unit 3: Image Processing
+Exploring the use of open-Computer-Vision (openCV) for robotics use cases
+
+This section makes extensive use of the cv_bridge to convert cv::Mat matrices of images from OpenCV into sensor_msgs.msg.Image data for ROS2
+
+![Alt text](readme/unit3-cv-bridge.png "Image of cv_bridge openCV architectural interface with ROS")
+
+In the first exercise, the robot rotates heading until it finds an orange blob, and it navigates to it
+
+![Alt text](readme/unit3-blob-tracker.gif "Gif of robot rotating to orange blob and navigating to door using it")
+
+The HSV min-max ranges for the orange blob were identified using a ranging tool provided
+
+![Alt text](readme/unit3-range-finder.gif "Gif of HSV range finder used to identify range for orange blob")
+
+In the second exercise, a line follower is created by analyzing and manipulating yaw to track the centroid of the yellow blob (line) on the ground
+
+![Alt text](readme/unit3-line-follower.gif "Gif of robot tracking and following yellow lines on ground")
+
+In the third exercise, the line follower is improved by adding functionality to handle scenarios of multiple centroids by prioritizing an appropriate centroid based on continuing on the rotational path
+
+![Alt text](readme/unit3-line-follower-optimized.gif "Gif of improved robot tracking and following yellow lines on ground")
+
+In the final exercise, a ROS subscriber is appended to the line follower to read a color choice and navigate the robot to the corresponding door
+
+![Alt text](readme/unit3-door-follower.gif "Gif of robot being provided a color marker of which door to stop at from the yellow track")
+
 ## Unit 4: Point Cloud Processing
 Exploring the use of point cloud library (PCL) for robotics use cases
 
